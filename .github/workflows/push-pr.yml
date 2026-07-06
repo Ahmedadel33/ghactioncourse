@@ -19,6 +19,5 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run test
-        # السطر اللي تحت ده هيخلي الأأمر يتنفذ جوه فولدر src بالظبط
-        working-directory: ./src
         run: npm start
+        working-directory: ./src
