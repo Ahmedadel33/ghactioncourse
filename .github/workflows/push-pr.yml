@@ -1,19 +1,22 @@
+name: CI Pipeline
+
 on:
   push:
-      branches:
-        - main
-        - "relese/**"
-  pull-request:
-       branches:
-        - main
-        - "relese/**"
+    branches:
+      - main
+      - "release/**"
+  pull_request:
+    branches:
+      - main
+      - "release/**"
 
 jobs:
-    test:
-        runs-on: ubunto-latest
-        steps:
-        -name : checkout code
-        uses:  action/checkout@v4.2.2
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-        -name: run test
+      - name: Run test
         run: npm start
