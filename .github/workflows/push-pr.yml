@@ -13,7 +13,7 @@ jobs:
         runs-on: ubunto-latest
         steps:
         -name : checkout code
-         uses:  action/checkout@v4.2.2
+        uses:  action/checkout@v4.2.2
 
         -name: run test
         run: npm start
