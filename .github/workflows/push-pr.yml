@@ -1,0 +1,19 @@
+on:
+  push:
+      branches:
+        - main
+        - "relese/**"
+  pull-request:
+       branches:
+        - main
+        - "relese/**"
+
+jobs:
+    test:
+        runs-on: ubunto-latest
+        steps:
+        -name : checkout code
+         uses:  action/checkout@v4.2.2
+
+        -name: run test
+        run: npm run dev
