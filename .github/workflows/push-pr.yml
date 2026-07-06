@@ -15,9 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      # تم التحديث إلى v4.2.2 أو v4 مباشرة لضمان استخدام أحدث سكريبت متوافق
       - name: Checkout code
-        uses: actions/checkout@v4 
+        uses: actions/checkout@v4
 
       - name: Run test
+        # السطر اللي تحت ده هيخلي الأأمر يتنفذ جوه فولدر src بالظبط
+        working-directory: ./src
         run: npm start
