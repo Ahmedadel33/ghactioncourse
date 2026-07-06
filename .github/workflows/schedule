@@ -1,0 +1,13 @@
+on:
+  workflow_dispatch: 
+
+jobs:
+  test:
+    runs-on: ubuntu-latest 
+    
+    steps: 
+      - name: Run Message 
+        run: echo "welcome to manual workflow" #  
+      
+     
+    
