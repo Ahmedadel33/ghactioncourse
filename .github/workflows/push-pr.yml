@@ -18,6 +18,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run test
+      # السطر ده هيطبع كل الملفات والفولدرات اللي عندك عشان نعرف المسار الصح
+      - name: Debug - List all files
+        run: ls -R
+
+      - name: Run Bash Test Script
         run: bash src/test.sh
-        working-directory: ./src
